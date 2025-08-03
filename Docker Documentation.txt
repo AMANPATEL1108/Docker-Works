@@ -1,0 +1,88 @@
+//check Version
+docker -v
+
+//for pull any image
+docker pull [image name]
+
+//for check in our systems Imags
+docker images
+
+//Search command or other 
+docker search [name of search]
+
+//run 
+docker run [name]
+
+//get all containers 
+docker ps -a
+
+//detach 
+docker run -d
+
+//environment
+docker run -e
+
+//image run with give a name  create container 
+docker run -d --name pythonContailer -d python
+
+//we want to run more time for container then 
+ docker run --name pythonContailner1 -it -d python
+
+//particular run and use languale 
+>docker exec -it [idofthat] python3
+Ex-Python 3.13.5 (main, Jul 22 2025, 04:26:21) [GCC 12.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+
+
+//exit 
+exit()
+
+//get all information of container 
+ docker inspect [idpfContainer]
+
+
+//use port wise server 
+docker run --name httpServer -d -p 8081:80 [httpd name of server]
+
+//stop container 
+docker stop [name or id of conainer]
+
+//remove a from history to run docker 
+docker rm [id of docker]
+
+//remove imaegs
+ docker rmi [name of image]
+
+
+//create and push on hub 
+docker login 
+docker commit #(save)
+docker push #(upload Repo on Docker)
+
+//copy from localsystem
+docker copy
+
+//docker log
+docker logs nameofconainer
+
+
+//store data for this
+docker volume
+
+// logout
+docker logout
+ 
+
+//-----------------------create own images--------------------------------------
+
+
+ docker build -t myubuntuImage . |Exmaples| docker build -t myjavaimage . 
+Done--("." is location of that directory of currrecct and myubuntu us name of that fromcurrect folder dockerfile data ok write a command and other we want in that docerh file ,take a file name is "Dockerfile"  and in that code like this Example :"
+--------code-----------
+FROM ubuntu
+MAINTAINER aman
+RUN apt update
+CMD ["echo", "This is My First ubuntu Image]
+--------------------)
+
